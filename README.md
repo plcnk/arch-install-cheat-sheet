@@ -55,5 +55,5 @@
     * Defaults      editor=/usr/bin/vim
     * user          ALL=(ALL) ALL
 * `pacman -S xorg plasma plasma-wayland-session kde-applications`
-* `systemctl enable sddm.service`
+* `systemctl enable sddm`
 * `reboot`
