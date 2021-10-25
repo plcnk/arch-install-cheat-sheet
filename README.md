@@ -47,7 +47,7 @@
 * `pacman -S open-vm-tools` (If VM)
 * `pacman -S neofetch`
 
-## Add Desktop Environment
+## Install KDE Desktop Environment
 
 * `useradd -m user -s /bin/bash`
 * `passwd user`
