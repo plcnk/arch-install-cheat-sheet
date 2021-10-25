@@ -1,5 +1,7 @@
 # Notes on how to install Arch Linux
 
+## Install System
+
 * `loadkeys fr-latin1`
 * Try to ping something
 * `timedatectl set-ntp true`
