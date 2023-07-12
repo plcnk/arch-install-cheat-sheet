@@ -29,7 +29,8 @@
 * `ln -sf /usr/share/zoneinfo/Europe/Paris /etc/localtime`
 * `hwclock --systohc`
 * `vim /etc/locale.gen`
-  * Search for locale, uncomment and save
+  * Search for locale (en_US), uncomment and save
+* `locale-gen`
 * `vim /etc/locale.conf`
   * Put **LANG=en_US.UTF-8**
 * `vim /etc/vconsole.conf`
