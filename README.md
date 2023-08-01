@@ -23,7 +23,7 @@
 * `mount /dev/sda1 /mnt/boot`
 * `swapon /dev/sda2`
 * `pacstrap /mnt base base-devel linux linux-firmware vim`
-* `genfstab -U /mnt >> /mnt/etc/fstab`
+* `genfstab -U /mnt >> /mnt/etc/fstab` (Generate with UUIDs, safer)
 * `arch-chroot /mnt /bin/bash`
 * `pacman -S networkmanager grub`
 * `systemctl enable NetworkManager`
