@@ -46,15 +46,4 @@
 * `reboot`
 * `login using root creds`
 * `pacman -S open-vm-tools` (If VM)
-* `pacman -S neofetch`
-
-## Install KDE Desktop Environment
-
-* `useradd -m user -s /bin/bash`
-* `passwd user`
-* `EDITOR=vim visudo`
-  * Defaults      editor=/usr/bin/vim
-  * user          ALL=(ALL) ALL
-* `pacman -S xorg plasma plasma-wayland-session kde-applications`
-* `systemctl enable sddm`
-* `reboot`
+* `pacman -S neofetch` (Very important)
