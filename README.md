@@ -1,4 +1,4 @@
-# Notes on how to install Arch Linux
+# Arch Linux Installation Cheat Sheet
 
 ## Install System
 
