@@ -5,18 +5,23 @@
 * `loadkeys fr-latin1`
 * Try to ping something
 * `timedatectl set-ntp true`
-* `cfdisk /dev/sdx`
-  * Select DOS
-  * Select New -> 512M -> Primary
-  * Type B to make partition bootable
-  * Select remaining space: New -> Primary
-  * Select Write -> yes
-  * Quit
-* `mkfs.ext4 /dev/sdx1`
-* `mkfs.ext4 /dev/sdx2`
-* `mount /dev/sdx2 /mnt`
+* `wipefs -a /dev/sda` (Replace sda with whatever disk label you have)
+* `fdisk /dev/sda`
+  * Boot partition
+    * Primary --> Partition 1 --> +512M
+    * Switch bootable flag (a)
+  * Swap partition
+    * Primary --> Partition 2 --> +1G
+    * Partition type (t) 82 (Swap)
+  * Root partition
+    * Primary --> Partition 3 --> Rest of the disk
+* `mkfs.ext4 /dev/sda1`
+* `mkswap /dev/sda2`
+* `mkfs.ext4 /dev/sda3`
+* `mount /dev/sda3 /mnt`
 * `mkdir /mnt/boot`
-* `mount /dev/sdx1 /mnt/boot`
+* `mount /dev/sda1 /mnt/boot`
+* `swapon /dev/sda2`
 * `pacstrap /mnt base base-devel linux linux-firmware vim`
 * `genfstab -U /mnt >> /mnt/etc/fstab`
 * `arch-chroot /mnt /bin/bash`
